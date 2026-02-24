@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import Hero from "@/components/hero";
 
 const Page = () => {
   return (
     <div>
-      <Button>Tesaa</Button>
+      <Hero />
     </div>
   );
 };
