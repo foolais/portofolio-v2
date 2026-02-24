@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <div className="w-3/4 mx-auto min-h-[60vh] flex flex-col items-center justify-center py-8">
+    <div className="max-w-4xl mx-auto px-6 min-h-[60vh] flex flex-col items-center justify-center py-8">
       {/* Status Badge */}
       <div className="bg-card border border-primary text-primary tracking-widest font-bold rounded-full py-1 px-4 flex items-center justify-center gap-2 text-sm mb-10">
         <span className="relative flex size-3">
