@@ -13,9 +13,9 @@ const CardExperience = () => {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col justify-start gap-4">
+        <div className="flex flex-col justify-start">
           {experienceData.map((exp, index) => (
-            <div key={index} className="relative flex gap-4 pb-8">
+            <div key={index} className="relative flex gap-4 pb-8 last:pb-0">
               <div className="relative flex flex-col items-center">
                 <div className="relative z-10 size-3 bg-primary rounded-full mt-1.5 shrink-0" />
                 <div className="absolute top-3 bottom-0 w-px bg-slate-300 left-1/2 -translate-x-1/2" />
@@ -24,9 +24,9 @@ const CardExperience = () => {
                 <span>
                   {exp.title} @{exp.place}
                 </span>
-                <span className="text-sm text-slate-500">
+                <Badge variant="secondary">
                   {exp.start} - {exp.end}
-                </span>
+                </Badge>
                 <div className="flex flex-col gap-2">
                   {exp.description.map((desc, i) => (
                     <div key={i} className="flex gap-2">

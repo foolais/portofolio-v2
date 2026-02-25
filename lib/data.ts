@@ -1,3 +1,5 @@
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+
 type IExperience = {
   title: string;
   place: string;
@@ -5,6 +7,19 @@ type IExperience = {
   end: string | "Present";
   description: string[];
   stack: string[];
+};
+
+type IConnect = {
+  name: string;
+  link: string;
+  type: "copy" | "link";
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon: React.ComponentType<any>;
+};
+
+type IStack = {
+  core: string[];
+  others: string[];
 };
 
 export const experienceData: IExperience[] = [
@@ -33,3 +48,35 @@ export const experienceData: IExperience[] = [
     stack: ["React.js", "Tailwind"],
   },
 ];
+
+export const connectData: IConnect[] = [
+  {
+    name: "Gmail",
+    link: "wahyu.esya17@gmail.com",
+    type: "copy",
+    icon: Mail,
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/foolais",
+    type: "link",
+    icon: Github,
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/wahyuesyanasution/",
+    type: "link",
+    icon: Linkedin,
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/wahyuesya/",
+    type: "link",
+    icon: Instagram,
+  },
+];
+
+export const stackData: IStack = {
+  core: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
+  others: ["Vue.js", "Sass", "Express.js", "Prisma", "MongoDB", "Git"],
+};

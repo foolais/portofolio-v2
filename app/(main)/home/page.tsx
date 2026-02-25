@@ -12,8 +12,8 @@ const Page = () => {
           <CardExperience />
         </div>
         <div className="col-span-2 grid grid-rows-2 gap-4">
-          <CardConnect />
           <CardTechStack />
+          <CardConnect />
         </div>
       </div>
     </>
