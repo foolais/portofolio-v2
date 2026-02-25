@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Moon, SquareTerminal } from "lucide-react";
+import { Menu, SquareTerminal } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
@@ -35,41 +35,34 @@ const Header = () => {
   ));
 
   return (
-    <div className="px-4 lg:px-0 flex items-center justify-between">
-      <div className="bg-card w-max lg:w-2/3 lg:mx-auto shadow py-2 px-4 lg:px-6 rounded-xl border">
+    <div className="flex items-center justify-between">
+      <div className="bg-card w-max md:w-4xl md:mx-auto shadow py-2 px-4 md:px-6 rounded-xl border">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-center gap-2">
             <div className="gradient p-1 rounded">
               <SquareTerminal className="text-card size-6" />
             </div>
-            <span className="text-gradient font-extrabold text-lg">
+            <span className="text-gradient font-extrabold text-md">
               WahyuEN
             </span>
           </div>
-          <div className="items-center justify-center gap-6 hidden lg:flex">
+          <div className="items-center justify-center gap-6 hidden md:flex">
             {navbarList}
-          </div>
-          <div className="sm:w-32 hidden lg:flex justify-end">
-            <Button size="icon">
-              <Moon />
-            </Button>
           </div>
         </div>
       </div>
-      <div className="block lg:hidden">
+      <div className="block md:hidden">
         <Popover>
           <PopoverTrigger asChild>
             <Button size="icon" variant="outline">
               <Menu />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-36 mr-4">
+          <PopoverContent className="w-44 mr-4">
             <div className="grid gap-4">
+              <Separator />
               <div className="space-y-4">{navbarList}</div>
               <Separator />
-              <Button>
-                <Moon />
-              </Button>
             </div>
           </PopoverContent>
         </Popover>

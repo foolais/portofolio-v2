@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 min-h-[60vh] flex flex-col items-center justify-center py-8">
+    <div className="max-w-4xl mx-auto px-6 min-h-[55vh] flex flex-col items-center justify-center py-8">
       {/* Status Badge */}
       <div className="bg-card border border-primary text-primary tracking-widest font-bold rounded-full py-1 px-4 flex items-center justify-center gap-2 text-sm mb-10">
         <span className="relative flex size-3">
@@ -13,7 +13,7 @@ const Hero = () => {
         <span>Available for Work</span>
       </div>
       {/* Heading */}
-      <h1 className="text-6xl font-extrabold tracking-tight">
+      <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
         <span className="text-gradient">Wahyu</span> Esya Nasution
       </h1>
       <span className="my-6 text-slate-500 tracking-wide">
@@ -27,7 +27,7 @@ const Hero = () => {
       {/* CTA */}
       <div className="flex items-center justify-center gap-6 mt-14">
         <Button className="w-40">
-          <Download /> Download CV
+          <Download /> Resume
         </Button>
         <Button variant="secondary" className="w-40">
           <Mail />
