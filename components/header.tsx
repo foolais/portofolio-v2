@@ -5,28 +5,20 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Separator } from "./ui/separator";
-
-const navData = [
-  {
-    title: "Home",
-    href: "/home",
-  },
-  {
-    title: "Projects",
-    href: "/projects",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
-];
+import { navData } from "@/lib/data";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const currentPath = usePathname();
+  console.log({ currentPath });
+
   const navbarList = navData.map((item) => (
     <Link
       href={item.href}
       key={item.title}
-      className="flex items-center justify-center gap-1 group"
+      className={`flex items-center justify-center gap-1 group ${
+        currentPath === item.href.toLocaleLowerCase() ? "text-primary" : ""
+      }`}
     >
       <span className="text-sm font-semibold group-hover:text-primary transition-all duration-300">
         {item.title}

@@ -1,4 +1,4 @@
-import { CodeXml, Download, Mail } from "lucide-react";
+import { CodeXml, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -13,11 +13,11 @@ const Hero = () => {
         <span>Available for Work</span>
       </div>
       {/* Heading */}
-      <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+      <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-center">
         <span className="text-gradient">Wahyu</span> Esya Nasution
       </h1>
-      <span className="my-6 text-slate-500 tracking-wide">
-        Next.js • React • TypeScript
+      <span className="my-6 text-slate-500 tracking-wide text-center">
+        Next.js • TypeScript • 1+ Year Experience
       </span>
       {/* Details */}
       <div className="flex items-center justify-center gap-1">
@@ -25,13 +25,9 @@ const Hero = () => {
         <span className="font-semibold">Frontend Developer</span>
       </div>
       {/* CTA */}
-      <div className="flex items-center justify-center gap-6 mt-14">
+      <div className="flex items-center justify-center gap-6 mt-10">
         <Button className="w-40">
           <Download /> Resume
-        </Button>
-        <Button variant="secondary" className="w-40">
-          <Mail />
-          Contact Me
         </Button>
       </div>
     </div>

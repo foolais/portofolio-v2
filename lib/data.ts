@@ -1,5 +1,10 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 
+type INav = {
+  title: string;
+  href: string;
+};
+
 type IExperience = {
   title: string;
   place: string;
@@ -21,6 +26,24 @@ type IStack = {
   core: string[];
   others: string[];
 };
+
+type IEducation = {
+  school: string;
+  degree: string;
+  start: string;
+  end: string | "Present";
+};
+
+export const navData: INav[] = [
+  {
+    title: "Profile",
+    href: "/profile",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+  },
+];
 
 export const experienceData: IExperience[] = [
   {
@@ -79,4 +102,24 @@ export const connectData: IConnect[] = [
 export const stackData: IStack = {
   core: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
   others: ["Vue.js", "Sass", "Express.js", "Prisma", "MongoDB", "Git"],
+};
+
+export const educationData: IEducation[] = [
+  {
+    school: "Binus University",
+    degree: "Bachelor of Science in Computer Science",
+    start: "Mei 2023",
+    end: "Present",
+  },
+  {
+    school: "Telkom University",
+    degree: "Associate Degree in Computer Technology",
+    start: "Aug 2019",
+    end: "Dec 2022",
+  },
+];
+
+export const highlightedProjects = {
+  name: "Waroeng US",
+  tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
 };
