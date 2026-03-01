@@ -10,7 +10,6 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const currentPath = usePathname();
-  console.log({ currentPath });
 
   const navbarList = navData.map((item) => (
     <Link
