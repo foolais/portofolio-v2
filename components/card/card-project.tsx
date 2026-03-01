@@ -5,6 +5,7 @@ import { truncateText } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { ArrowUpRight, Github, Globe } from "lucide-react";
 import { Separator } from "../ui/separator";
+import Link from "next/link";
 
 const CardProject = (item: IProject) => {
   return (
@@ -41,13 +42,15 @@ const CardProject = (item: IProject) => {
                 <Globe /> Demo
               </Button>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              className="text-xs scale-animate"
-            >
-              View Details <ArrowUpRight />
-            </Button>
+            <Link href={`/projects/${item.id}`}>
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-xs scale-animate"
+              >
+                View Details <ArrowUpRight />
+              </Button>
+            </Link>
           </div>
         </div>
       </CardContent>

@@ -3,7 +3,7 @@ import ProjectTypeBadge from "@/components/project-type-badge";
 
 const ProjectsPage = () => {
   return (
-    <div className="lg:w-5/6 mx-auto py-8 ">
+    <div className="lg:w-5/6 mx-auto py-8">
       <h1 className="text-4xl font-bold">
         <span className="text-gradient">Projects</span> Gallery
       </h1>

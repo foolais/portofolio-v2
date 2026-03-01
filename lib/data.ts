@@ -119,11 +119,6 @@ export const educationData: IEducation[] = [
   },
 ];
 
-export const highlightedProjects = {
-  name: "Waroeng US",
-  tech: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
-};
-
 export const projectTypes = [
   "All",
   "Next.js",
@@ -137,6 +132,7 @@ export const projectTypes = [
 ];
 
 export type IProject = {
+  id: number;
   image: string;
   name: string;
   description: string;
@@ -148,10 +144,12 @@ export type IProject = {
     title: string;
     description: string;
   }[];
+  isHighlighted: boolean;
 };
 
 export const projectsData: IProject[] = [
   {
+    id: 1,
     image: "",
     name: "Waroeng US",
     description:
@@ -173,8 +171,10 @@ export const projectsData: IProject[] = [
           "The cashier dashboard allows cashiers to process orders, manage customer interactions, and handle payments efficiently. It provides a streamlined interface for managing transactions and maintaining accurate records.",
       },
     ],
+    isHighlighted: true,
   },
   {
+    id: 2,
     image: "",
     name: "Mind Orbit",
     description:
@@ -196,8 +196,10 @@ export const projectsData: IProject[] = [
           "The task management feature allows users to create, update, and delete tasks within each project. It supports task categorization, due dates, and status tracking to help users stay organized and on schedule.",
       },
     ],
+    isHighlighted: false,
   },
   {
+    id: 3,
     image: "",
     name: "Waroeng US",
     description:
@@ -219,8 +221,10 @@ export const projectsData: IProject[] = [
           "The cashier dashboard allows cashiers to process orders, manage customer interactions, and handle payments efficiently. It provides a streamlined interface for managing transactions and maintaining accurate records.",
       },
     ],
+    isHighlighted: false,
   },
   {
+    id: 4,
     image: "",
     name: "Mind Orbit",
     description:
@@ -242,8 +246,10 @@ export const projectsData: IProject[] = [
           "The task management feature allows users to create, update, and delete tasks within each project. It supports task categorization, due dates, and status tracking to help users stay organized and on schedule.",
       },
     ],
+    isHighlighted: false,
   },
   {
+    id: 5,
     image: "",
     name: "Waroeng US",
     description:
@@ -265,8 +271,10 @@ export const projectsData: IProject[] = [
           "The cashier dashboard allows cashiers to process orders, manage customer interactions, and handle payments efficiently. It provides a streamlined interface for managing transactions and maintaining accurate records.",
       },
     ],
+    isHighlighted: false,
   },
   {
+    id: 6,
     image: "",
     name: "Mind Orbit",
     description:
@@ -288,5 +296,6 @@ export const projectsData: IProject[] = [
           "The task management feature allows users to create, update, and delete tasks within each project. It supports task categorization, due dates, and status tracking to help users stay organized and on schedule.",
       },
     ],
+    isHighlighted: false,
   },
 ];

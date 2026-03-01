@@ -5,7 +5,10 @@ const CardConnect = () => {
   return (
     <div className="grid grid-cols-2 md:grid-flow-row gap-4">
       {connectData.map(({ icon: Icon, ...connect }, index) => (
-        <Card key={index} className="cursor-pointer h-max">
+        <Card
+          key={index}
+          className="cursor-pointer h-max hover:scale-110 transition-all duration-300"
+        >
           <CardContent className="flex flex-col items-center justify-center gap-4">
             <Icon
               className={`size-10 ${

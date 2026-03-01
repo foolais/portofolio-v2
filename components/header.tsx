@@ -16,7 +16,9 @@ const Header = () => {
       href={item.href}
       key={item.title}
       className={`flex items-center justify-center gap-1 group ${
-        currentPath === item.href.toLocaleLowerCase() ? "text-primary" : ""
+        currentPath.includes(item.href.toLocaleLowerCase())
+          ? "text-primary"
+          : ""
       }`}
     >
       <span className="text-sm font-semibold group-hover:text-primary transition-all duration-300">
