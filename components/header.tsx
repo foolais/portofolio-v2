@@ -8,7 +8,7 @@ import { Separator } from "./ui/separator";
 import { navData } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
-const Header = () => {
+const Header = ({ isAdmin = false }: { isAdmin?: boolean }) => {
   const currentPath = usePathname();
 
   const navbarList = navData.map((item) => (
@@ -27,6 +27,19 @@ const Header = () => {
     </Link>
   ));
 
+  const backToProfile = () => (
+    <Link
+      href="/"
+      className={`flex items-center justify-center gap-1 group ${
+        currentPath === "/" ? "text-primary" : ""
+      }`}
+    >
+      <span className="text-sm font-semibold group-hover:text-primary transition-all duration-300">
+        Back to Profile
+      </span>
+    </Link>
+  );
+
   return (
     <div className="flex items-center justify-between">
       <div className="bg-card w-max md:w-4xl md:mx-auto shadow py-2 px-4 md:px-6 rounded-xl border">
@@ -40,7 +53,7 @@ const Header = () => {
             </span>
           </div>
           <div className="items-center justify-center gap-6 hidden md:flex">
-            {navbarList}
+            {isAdmin ? backToProfile() : navbarList}
           </div>
         </div>
       </div>
