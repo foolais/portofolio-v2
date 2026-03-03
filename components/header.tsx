@@ -34,9 +34,7 @@ const Header = ({ isAdmin = false }: { isAdmin?: boolean }) => {
         currentPath === "/" ? "text-primary" : ""
       }`}
     >
-      <span className="text-sm font-semibold group-hover:text-primary transition-all duration-300">
-        Back to Profile
-      </span>
+      <Button variant="secondary">Back to Main Page</Button>
     </Link>
   );
 

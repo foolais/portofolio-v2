@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
+import { LogOut } from "lucide-react";
 
 const LogoutButton = () => {
   const router = useRouter();
@@ -19,7 +20,16 @@ const LogoutButton = () => {
       router.refresh();
     }
   };
-  return <Button onClick={handleLogout}>Logout</Button>;
+  return (
+    <Button
+      variant="destructive"
+      onClick={handleLogout}
+      className="w-full justify-start gap-4"
+    >
+      <LogOut />
+      Logout
+    </Button>
+  );
 };
 
 export default LogoutButton;

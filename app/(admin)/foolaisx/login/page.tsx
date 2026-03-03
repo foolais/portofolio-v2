@@ -8,7 +8,7 @@ const AdminLoginPage = async () => {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (user) return redirect("/foolaisx/profile");
+  if (user) return redirect("/foolaisx/dashboard");
   return (
     <div className="flex items-center justify-center mt-14">
       <CardAuth />

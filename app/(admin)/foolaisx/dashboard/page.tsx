@@ -1,4 +1,4 @@
-import LogoutButton from "@/components/logout-button";
+import ContainerContent from "@/components/admin/container-content";
 import { createClient } from "@/lib/supabase-server";
 import { redirect } from "next/navigation";
 
@@ -11,11 +11,9 @@ export default async function ProfilePage() {
   if (!user) return redirect("/foolaisx/login");
 
   return (
-    <div>
-      <h1>Profile</h1>
-      <p>Email: {user?.email}</p>
-      <p>User ID: {user?.id}</p>
-      <LogoutButton />
+    <div className="px-8 py-4 max-w-7xl mx-auto min-h-[85vh] flex flex-col">
+      <h1 className="text-2xl font-semibold">Content Management</h1>
+      <ContainerContent />
     </div>
   );
 }

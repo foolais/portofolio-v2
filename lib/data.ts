@@ -1,4 +1,14 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import {
+  CodeXml,
+  Github,
+  History,
+  Instagram,
+  Linkedin,
+  Mail,
+  School,
+  SquarePlus,
+  User,
+} from "lucide-react";
 
 type INav = {
   title: string;
@@ -299,3 +309,57 @@ export const projectsData: IProject[] = [
     isHighlighted: false,
   },
 ];
+
+type ISidebar = {
+  title: string;
+  value: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon: React.ComponentType<any>;
+};
+
+export const sidebarData: ISidebar[] = [
+  {
+    title: "New Project",
+    value: "newProject",
+    icon: SquarePlus,
+  },
+  {
+    title: "New Education",
+    value: "newEducation",
+    icon: SquarePlus,
+  },
+  {
+    title: "New Experience",
+    value: "newExperience",
+    icon: SquarePlus,
+  },
+  {
+    title: "Profile",
+    value: "profile",
+    icon: User,
+  },
+  {
+    title: "All Project",
+    value: "allProject",
+    icon: CodeXml,
+  },
+  {
+    title: "All Experience",
+    value: "allExperience",
+    icon: History,
+  },
+  {
+    title: "All Education",
+    value: "allEducation",
+    icon: School,
+  },
+];
+
+export type IMenu =
+  | "newProject"
+  | "newExperience"
+  | "newEducation"
+  | "profile"
+  | "allProject"
+  | "allExperience"
+  | "allEducation";
